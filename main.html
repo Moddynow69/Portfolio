@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio.</a>
+        <nav class="navbar">
+            <a href="#home" style="--i:1;" class="active">Home</a>
+            <a href="#about" style="--i:2;">About</a>
+            <a href="#skills" style="--i:3;">Skills</a>
+            <a href="#projects" style="--i:4;">Projects</a>
+            <a href="#contact" style="--i:5;">Contact</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home_content">
+            <h3 style="--i:1">Namaste, It's Me</h3>
+            <h1 style="--i:3">Tushar</h1>
+            <h2 style="--i:2">Undergrad at <span>NITKKR(CS)'25</span></h2>
+            <div class="social_media">
+                <a href="#" style="--i:1;"><i class='bx bxl-instagram'></i></a>
+                <a href="#" style="--i:2;"><i class='bx bxl-linkedin'></i></a>
+                <a class="resume" href="#" style="--i:3;">Resume<i class='bx bxs-download'></i></a>
+            </div>
+        </div>
+        <div class="home_img">
+            <img src="img.png">
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="about_img">
+            <img src="img.png">
+        </div>
+        <div class="about_content">
+            <h2 class="heading">
+                About <span>Me</span>
+            </h2>
+            <h3><i class='bx bxs-chevrons-right'></i></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                <br>
+                Provident delectus facere reprehenderit voluptates pariatur fugit eius perferendis vitae,
+                <br>
+                optio minus explicabo sit, id nemo magni consequatur tempore necessitatibus tenetur itaque?
+            </p>
+        </div>
+    </section>
+    <section class="skills" id="skills">
+        <div class="upper">
+            <div class="Skills_dis">
+                <div class="skills_content">
+                    <h1 class="heading1" style="--i:1">
+                        <p>
+                            Programing languages
+                            <i class='bx bxs-chevrons-right'></i>
+                        </p>
+                    </h1>
+                    <h1 class="heading1" style="--i:4">
+                        <p>Devlopment <i class='bx bxs-chevrons-right'></i></p>
+                    </h1>
+
+                    <h1 class="heading1" style="--i:6">
+                        <p>
+
+                            Productivity <i class='bx bxs-chevrons-right'></i>
+                        </p>
+                    </h1>
+                </div>
+                <div class="skills_imgs">
+                    <div class="c_cpp">
+                        <img src="C.png" alt="" class="c">
+                        <img src="C++.png" alt="" class="c++">
+                        <img src="Python.png" alt="" class="py">
+                    </div>
+                    <div class="full_stack">
+                        <img src="Mongo.png" alt="" class="mon">
+                        <img src="express.png" alt="" class="ex">
+                        <img src="react.png" alt="" class="rea">
+                        <img src="nord.png" alt="" class="njs">
+                    </div>
+                    <div class="deg">
+                        <img src="ps_ai.png" alt="" class="psai">
+                        <img src="DaVinci_Resolve.png" alt="" class="davin">
+                    </div>
+                </div>
+            </div>
+            <div class="home_img">
+                <img src="img.png">
+            </div>
+        </div>
+        <div class="skills_graph">
+            <canvas id="myChart1" class="pie"></canvas>
+            <canvas id="myChart2" class="bar"></canvas>
+
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <div class="minimap">
+            <div class="img1">
+                <img src="./logo.png" alt="">
+            </div>
+            <div class="con">
+                <a href="https://github.com/4AM-Squad/NIT-miniMap" target="_blank">NITmini Map</a>
+                <p>
+                    <br>
+                    1. The scheduling effective by maintaining personalized
+                    schedules and timetables as well as making it easier to track any
+                    location via the map feature embraced with the virtual view
+                    feature making campus exploring trouble-free.
+                    <br><br>
+                    2. Built in nodejs/MongoDb and HTML/CSS/JS
+                </p>
+            </div>
+            <div class="img2">
+                <img src="./nit.png" alt="">
+            </div>
+        </div>
+        <div class="bookshuk">
+            <div class="imgb1">
+
+            </div>
+            <div class="conb">
+
+            </div>
+            <div class="imgb2">
+
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+
+    </section>
+    <script src="script.js"></script>
+    <script>
+        var xValues = ["C", "C++", "Python", "HTML/CSS", "JS"];
+        var yValues = [55, 49, 44, 24, 35];
+        var barColors = [
+            "#171716",
+            "#2e2e2c",
+            "#5c5b58",
+            "#a0a099",
+            "#a0a099"
+        ];
+
+        new Chart("myChart1", {
+            type: "doughnut",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: ""
+                }
+            }
+        });
+        new Chart("myChart2", {
+            type: "bar",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                legend: { display: false },
+                title: {
+                    display: true,
+                    text: ""
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
