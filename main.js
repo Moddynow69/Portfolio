@@ -65,6 +65,6 @@ ScrollReveal({
     delay: 200
 });
 ScrollReveal().reveal('.about_content', { origin: 'top' });
-ScrollReveal().reveal('.Skills_dis,.img1', { origin: 'left' });
+ScrollReveal().reveal('.Skills_dis,.img1,home_content', { origin: 'left' });
 ScrollReveal().reveal('.home_img,.img2', { origin: 'right' });
 ScrollReveal().reveal('.con', { scale: '.1' });
