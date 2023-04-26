@@ -100,6 +100,41 @@
         content: "Content Creator";
     }
 }
+@media (min-width:1000px) {
+    #menu {
+        display: none;
+    }
+}
+@media (max-width:1000px) {
+    #menu {
+        font-size: 4vw;
+        scale: 2;
+        display: block;
+    }
+    .navbar
+    {
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        width: 100%;
+        padding: 1rem 3%;
+        background-color: #181b20;
+        display: flex;
+        flex-direction: column;
+        display: none;
+    }
+    .navbar.active
+    {
+        display: flex;
+    }
+    .navbar a 
+    {
+        display: block;
+        font-size: 2rem; 
+        /* margin: 2rem 0%; */
+        padding: 2%;
+    }
+}
 
 /* CSS */
 * {
@@ -133,6 +168,10 @@ body {
 #myBtn:hover {
 
     background-color: #555;
+}
+
+#menu {
+    font-size: 2vh;
 }
 
 section {
@@ -445,7 +484,7 @@ section {
 .skills_content h1 p:hover {
     box-shadow: 0 0 1vh #0ef;
     transition: 1s;
-    cursor:auto;
+    cursor: auto;
 }
 
 .bar {
