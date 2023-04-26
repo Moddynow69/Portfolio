@@ -15,13 +15,16 @@
     <header class="header">
         <a href="#" class="logo">Portfolio.</a>
         <nav class="navbar">
-            <a href="#home" style="--i:1;" class="active">Home</a>
-            <a href="#about" style="--i:2;">About</a>
-            <a href="#skills" style="--i:3;">Skills</a>
-            <a href="#projects" style="--i:4;">Projects</a>
-            <a href="#contact" style="--i:5;">Contact</a>
+            <a id="button1" href="#home" style="--i:1;" class="active">Home</a>
+            <a id="button2" href="#about" style="--i:2;">About</a>
+            <a id="button3" href="#skills" style="--i:3;">Skills</a>
+            <a id="button4" href="#projects" style="--i:4;">Projects</a>
+            <a id="button5" href="#contact" style="--i:5;">Contact</a>
         </nav>
     </header>
+    <div class="s-top">
+        <a id="myBtn" href="#">TOP<br><img src="./content/top.png"></a>
+    </div>
     <section class="home" id="home">
         <div class="home_content">
             <h3 style="--i:1">Namaste, It's Me</h3>
@@ -45,7 +48,7 @@
             <h2 class="heading">
                 About <span>Me</span>
             </h2>
-            <h3><i class='bx bxs-chevrons-right'></i></h3>
+            <h3 id="abh3"><i class='bx bxs-chevrons-right'></i></h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 <br>
                 Provident delectus facere reprehenderit voluptates pariatur fugit eius perferendis vitae,
@@ -139,52 +142,8 @@
     <section class="contact" id="contact">
 
     </section>
-    <script src="script.js"></script>
-    <script>
-        var xValues = ["C", "C++", "Python", "HTML/CSS", "JS"];
-        var yValues = [55, 49, 44, 24, 35];
-        var barColors = [
-            "#171716",
-            "#2e2e2c",
-            "#5c5b58",
-            "#a0a099",
-            "#a0a099"
-        ];
-
-        new Chart("myChart1", {
-            type: "doughnut",
-            data: {
-                labels: xValues,
-                datasets: [{
-                    backgroundColor: barColors,
-                    data: yValues
-                }]
-            },
-            options: {
-                title: {
-                    display: true,
-                    text: ""
-                }
-            }
-        });
-        new Chart("myChart2", {
-            type: "bar",
-            data: {
-                labels: xValues,
-                datasets: [{
-                    backgroundColor: barColors,
-                    data: yValues
-                }]
-            },
-            options: {
-                legend: { display: false },
-                title: {
-                    display: true,
-                    text: ""
-                }
-            }
-        });
-    </script>
+    <script type="module" src="main.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </body>
 
 </html>
