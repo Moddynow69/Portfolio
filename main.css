@@ -134,6 +134,7 @@
         /* margin: 2rem 0%; */
         padding: 2%;
     }
+
 }
 
 /* CSS */
@@ -147,6 +148,7 @@
 body {
     background-color: #1f242d;
     color: antiquewhite;
+    width: 100%;
 }
 
 #myBtn {
@@ -183,6 +185,7 @@ section {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
     padding: 1vh 10%;
     background: transparent;
@@ -422,6 +425,7 @@ section {
     justify-content: space-evenly;
     align-items: center;
     width: 99vw;
+    height: 50vh;
 }
 
 .skills_imgs {
@@ -465,10 +469,11 @@ section {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin: 10wh;
 }
 
 .skills_content h1 {
-    font-size: 3vh;
+    font-size: 1.5vw;
     height: 11.5vh;
     display: flex;
     justify-content: right;
@@ -487,18 +492,16 @@ section {
     cursor: auto;
 }
 
-.bar {
-    max-width: 40vw;
-    width: 100%;
+.dbar {
+    width:100%;max-width:45vw;
 }
 
 .bar:hover {
     box-shadow: 0 0 1vh #0ef;
 }
 
-.pie {
-    max-width: 20vw;
-    width: 100%;
+.dpie {
+    width:100%;max-width: 22vw;
 }
 
 .pie:hover {

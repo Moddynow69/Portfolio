@@ -12,8 +12,7 @@ var canva1 = document.getElementById('myChart1');
 var canva2 = document.getElementById('myChart2');
 let mybutton = document.getElementById("myBtn");
 window.onscroll = function () {
-    console.log(window.scrollY);
-    if ((Math.floor(window.scrollY) >= 800 && Math.floor(window.scrollY) <= 1300)|| (Math.floor(window.scrollY)>=2800&&Math.floor(window.scrollY)<=2900)) {
+    if ((Math.floor(window.scrollY) >= 800 && Math.floor(window.scrollY) <= 1300) || (Math.floor(window.scrollY) >= 2800 && Math.floor(window.scrollY) <= 2900)) {
         new Chart("myChart1", {
             type: "doughnut",
             data: {
@@ -31,7 +30,7 @@ window.onscroll = function () {
             }
         });
     }
-    if ((Math.floor(window.scrollY) >= 800 && Math.floor(window.scrollY) <= 1300)|| (Math.floor(window.scrollY)>=2800&&Math.floor(window.scrollY)<=2900)) {
+    if ((Math.floor(window.scrollY) >= 800 && Math.floor(window.scrollY) <= 1300) || (Math.floor(window.scrollY) >= 2800 && Math.floor(window.scrollY) <= 2900)) {
         new Chart("myChart2", {
             type: "bar",
             data: {
@@ -49,9 +48,14 @@ window.onscroll = function () {
                 }
             }
         });
+        window.onload = function () {
+            if (window.innerWidth <= 1000) {
+                Chart.defaults.font.size = 2;
+            }
+        }
     }
 
-// <==============Top Button==============>
+    // <==============Top Button==============>
 
     if (window.scrollY > 20) {
         mybutton.style.display = "block";
@@ -70,8 +74,8 @@ ScrollReveal({
     delay: 200
 });
 ScrollReveal().reveal('.about_content', { origin: 'top' });
-ScrollReveal().reveal('.Skills_dis,.img1,home_content', { origin: 'left' });
-ScrollReveal().reveal('.home_img,.img2', { origin: 'right' });
+ScrollReveal().reveal('.Skills_dis,.img1,home_content', { origin: 'top' });
+ScrollReveal().reveal('.home_img,.img2', { origin: 'bottom' });
 ScrollReveal().reveal('.con', { scale: '.1' });
 
 
@@ -83,6 +87,6 @@ let navb = document.querySelector('#menu');
 let navbar = document.querySelector('.navbar');
 
 navb.onclick = () => {
- navb.classList.toggle('bx-x');
- navbar.classList.toggle('active');
+    navb.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
 };
