@@ -84,9 +84,96 @@ ScrollReveal().reveal('.con', { scale: '.1' });
 
 let navb = document.querySelector('#menu');
 
-let navbar = document.querySelector('.navbar');
+let navbar = document.querySelector('#navbarid');
 
 navb.onclick = () => {
     navb.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 };
+
+// <==============scroll navbar btn color==============>
+let btn1 = document.getElementById('button1');
+let btn2 = document.getElementById('button2');
+let btn3 = document.getElementById('button3');
+let btn4 = document.getElementById('button4');
+let btn5 = document.getElementById('button5');
+let sec = document.getElementById('home')
+window.onscroll = function () {
+    if(scrollY<=sec.clientHeight)
+    {
+        btn1.style.color='aqua';
+    }
+    else
+    {
+        btn1.style.color='white';
+    }
+    if(scrollY>sec.clientHeight && scrollY<=2*sec.clientHeight)
+    {
+        btn2.style.color='aqua';
+    }
+    else
+    {
+        btn2.style.color='white';
+    }
+    if(scrollY>2*sec.clientHeight && scrollY<=3*sec.clientHeight)
+    {
+        btn3.style.color='aqua';
+    }
+    else
+    {
+        btn3.style.color='white';
+    }
+    if(scrollY>3*sec.clientHeight && scrollY<=4*sec.clientHeight)
+    {
+        btn4.style.color='aqua';
+    }
+    else
+    {
+        btn4.style.color='white';
+    }
+    if(scrollY>4*sec.clientHeight && scrollY<=5*sec.clientHeight)
+    {
+        btn5.style.color='aqua';
+    }
+    else
+    {
+        btn5.style.color='white';
+    }
+}
+// <==============on click effect==============>
+btn3.onclick = function ()
+{
+    new Chart("myChart1", {
+        type: "doughnut",
+        data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: ""
+            }
+        }
+    });
+    new Chart("myChart2", {
+        type: "bar",
+        data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
+        },
+        options: {
+            legend: { display: false },
+            title: {
+                display: true,
+                text: ""
+            }
+        }
+    });
+}

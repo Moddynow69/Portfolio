@@ -134,7 +134,10 @@
         /* margin: 2rem 0%; */
         padding: 2%;
     }
-
+    .minimap
+    {
+        flex-direction: row;
+    }
 }
 
 /* CSS */
@@ -165,8 +168,14 @@ body {
     font-size: 1vw;
     text-align: center;
     text-decoration: none;
+    width: 5vw;
+    width: 5vw;
 }
 
+#myBtn img {
+    
+    width: 5vw;
+}
 #myBtn:hover {
 
     background-color: #555;
