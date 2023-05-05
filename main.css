@@ -183,12 +183,15 @@ body {
     color: white;
     cursor: pointer;
     border-radius: 10%;
-    font-size: .5w;
+    font-size: .75vw;
     text-align: center;
     text-decoration: none;
     width: 3vw;
 }
 
+#myBtn a {
+    font-size: 1vw;
+}
 #myBtn img {
 
     width: 2vw;
