@@ -701,11 +701,9 @@ section {
     padding-right: 2vw;
 }
 
-#msg
+#msgcon
 {
+    display: none;    
     animation: slideright 1s ease forwards;  
-    position: absolute;
-    top:472vh;
-    left: 50vw;
     color: #0ef;
 }

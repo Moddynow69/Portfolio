@@ -274,11 +274,12 @@ let text = "tusharkaler450@gmail.com";
 atrate.onclick = function ()
 {
     navigator.clipboard.writeText(text);
-    document.getElementById('contact').innerHTML+=
-    `
-    <div id="msg">Copied to Clipboard</div>
-    
-    `
+    document.getElementById('msgcon').style.display='block';
+    setTimeout(visiblenot, 3000);
+}
+function visiblenot()
+{
+    document.getElementById('msgcon').style.display='none';
 }
 atrate.onmouseleave= function () 
 {
