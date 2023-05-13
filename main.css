@@ -156,6 +156,20 @@
     .minimap {
         flex-direction: row;
     }
+    .skills_graph
+    {
+        margin-top: 5vh;
+        flex-direction: column;
+    }
+    .skills_img
+    {
+        display: none;
+    }
+    .pie
+    {
+        font: 1px;
+        width: 1000px;
+    }
 }
 
 /* CSS */
@@ -526,14 +540,26 @@ section {
     box-shadow: 0 0 1vh #0ef;
 }
 
-.dpie {
+.pie {
     width: 100%;
     max-width: 22vw;
-    /* width: ; */
 }
 
 .pie:hover {
     box-shadow: 0 0 1vh #0ef;
+}
+.skills_img img {
+    width: 20vw;
+    opacity: 0;
+    animation: zoomIn 2s ease forwards, float 4s ease-in-out infinite;
+    animation-delay: 0.2s, 3s;
+    border-radius: 50%;
+}
+
+.skills_img img:hover {
+    border-radius: 50%;
+    box-shadow: 0 0 2vh #0ef;
+    transition: 0.6s ease-in;
 }
 
 /* projects */
