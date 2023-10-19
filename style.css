@@ -80,14 +80,10 @@ section {
     display: none;
 }
 
-.sections{
-    background-image: url('./content/background.svg');
-    scroll-behavior:auto;
-    background-position:top;
-    background-repeat: no-repeat;
-    position: relative;
-    height: screen;
+body{
+    background: url('./content/background.svg');
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .home {
