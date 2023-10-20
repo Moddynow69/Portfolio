@@ -225,7 +225,7 @@ span {
     gap: 2rem;
 }
 
-.skills-container .skills-box {
+.skills-box {
     flex: 1 1 30rem;
     background: var(--second-bg-color);
     padding: 3rem 2rem 4rem;
@@ -235,7 +235,7 @@ span {
     transition: .5s ease;
 }
 
-.skills-container .skills-box:hover {
+.skills-box:hover {
     border-color: var(--main-color);
     transform: scale(1.02);
 }
@@ -263,6 +263,8 @@ span {
 
 .skills-box img {
     width: 15rem;
+    padding: 0.1rem;
+
 }
 
 .projects h2 {
