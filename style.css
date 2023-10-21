@@ -58,10 +58,13 @@ section {
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;
-    cursor: default;
+    cursor: pointer;
     text-decoration: none;
 }
 
+.logo:hover{
+    color: var(--main-color);
+}
 .navbar a {
     font-size: 1.7rem;
     color: var(--text-color);
@@ -193,7 +196,10 @@ span {
 .about {
     justify-content: space-around;
 }
-
+.about-content{
+    max-width: 1000px;
+    height: 250px;
+}
 .about-content h3::after {
     content: "";
     animation: change 12s ease infinite;
@@ -370,6 +376,7 @@ span {
 }
 
 .contacticon a {
+    font-size: 5rem;
     margin: 10px;
 }
 
@@ -474,6 +481,9 @@ span {
     html {
         font-size: 55%;
     }
+    .emailcon {
+        width: 450px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -497,6 +507,9 @@ span {
         min-height: auto;
     }
 
+    .emailcon {
+        width: 400px;
+    }
     .footer {
         padding: 2rem 3%;
     }
@@ -530,10 +543,6 @@ span {
         margin: 3rem 0;
     }
 
-    .home {
-        flex-direction: column;
-    }
-
     .home-content h3 {
         font-size: 2.6rem;
     }
@@ -542,8 +551,8 @@ span {
         font-size: 5rem;
     }
 
-    .home-img {
-        width: 70vw;
+    .home-img img{
+        width: 210px;
         margin-top: 4rem;
         text-align: center;
     }
@@ -574,11 +583,20 @@ span {
     .skills-graph {
         flex-direction: column;
     }
+    .emailcon {
+        width: 400px;
+    }
+    .emailcon a {
+        font-size: 3rem;
+    }
 }
 
 @media (max-width: 617px) {
     .projects-container {
         grid-template-columns: 1fr;
+    }
+    .emailcon {
+        width: 390px;
     }
 }
 
@@ -586,15 +604,17 @@ span {
     html {
         font-size: 50%;
     }
-
+    .home {
+        flex-direction: column;
+    }
     .contact from .input-box input {
         width: 100%;
     }
 }
 
-@media (max-width: 365px) {
-    .home-img {
-        width: 90vw;
+@media (max-width: 375px) {
+    .home-img img{
+        width: 210px;
     }
 
     .about-img {
@@ -608,5 +628,11 @@ span {
     .footer p {
         text-align: center;
         margin-top: 2rem;
+    }
+    .emailcon {
+        width: 230px;
+    }
+    .emailcon a {
+        font-size: 2rem;
     }
 }
