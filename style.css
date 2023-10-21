@@ -62,9 +62,10 @@ section {
     text-decoration: none;
 }
 
-.logo:hover{
+.logo:hover {
     color: var(--main-color);
 }
+
 .navbar a {
     font-size: 1.7rem;
     color: var(--text-color);
@@ -83,7 +84,7 @@ section {
     display: none;
 }
 
-body{
+body {
     background: url('./content/background.svg');
     background-size: cover;
     background-attachment: fixed;
@@ -173,6 +174,7 @@ span {
     gap: 2rem;
     /* background: var(--second-bg-color); */
 }
+
 .about-img img {
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
@@ -196,10 +198,12 @@ span {
 .about {
     justify-content: space-around;
 }
-.about-content{
+
+.about-content {
     max-width: 1000px;
     height: 250px;
 }
+
 .about-content h3::after {
     content: "";
     animation: change 12s ease infinite;
@@ -385,7 +389,7 @@ span {
 }
 
 #atrate:hover .dise1 .dise2 {
-    visibility:visible;
+    visibility: visible;
 }
 
 
@@ -437,6 +441,28 @@ span {
     color: var(--second-bg-color);
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+
+}
+::-webkit-scrollbar:hover{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--main-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(1, 208, 223);
+    box-shadow: 0 0 10px 5px rgb(82, 132, 135);
+}
+
 @keyframes float {
     0% {
         transform: translateY(0);
@@ -481,6 +507,7 @@ span {
     html {
         font-size: 55%;
     }
+
     .emailcon {
         width: 450px;
     }
@@ -510,6 +537,7 @@ span {
     .emailcon {
         width: 400px;
     }
+
     .footer {
         padding: 2rem 3%;
     }
@@ -551,7 +579,7 @@ span {
         font-size: 5rem;
     }
 
-    .home-img img{
+    .home-img img {
         width: 210px;
         margin-top: 4rem;
         text-align: center;
@@ -583,9 +611,11 @@ span {
     .skills-graph {
         flex-direction: column;
     }
+
     .emailcon {
         width: 400px;
     }
+
     .emailcon a {
         font-size: 3rem;
     }
@@ -595,6 +625,7 @@ span {
     .projects-container {
         grid-template-columns: 1fr;
     }
+
     .emailcon {
         width: 390px;
     }
@@ -604,16 +635,18 @@ span {
     html {
         font-size: 50%;
     }
+
     .home {
         flex-direction: column;
     }
+
     .contact from .input-box input {
         width: 100%;
     }
 }
 
 @media (max-width: 375px) {
-    .home-img img{
+    .home-img img {
         width: 210px;
     }
 
@@ -629,9 +662,11 @@ span {
         text-align: center;
         margin-top: 2rem;
     }
+
     .emailcon {
         width: 230px;
     }
+
     .emailcon a {
         font-size: 2rem;
     }
