@@ -122,19 +122,7 @@ btnbs.onclick = () =>{
 
 // <==============on click contact==============>
 
-let atrate = document.getElementById('emailcon');
-let dise1 = document.getElementById('dise1');
-let dise2 = document.getElementById('dise2');
-let backg = document.getElementById('emailcon');
-atrate.onmouseover = function () {
-    dise1.style.display = 'block';
-    dise2.style.display = 'block';
-    backg.style.backgroundColor = 'white';
-    dise1.style.color = 'aqua';
-    atrate.style.color = 'aqua';
-    atrate.style.color = 'aqua';
-    dise2.style.color = 'aqua';
-}
+let atrate = document.getElementById('atrate');
 let text = "tusharkaler450@gmail.com";
 
 atrate.onclick = function () {
@@ -144,10 +132,4 @@ atrate.onclick = function () {
 }
 function visiblenot() {
     document.getElementById('msgcon').style.display = 'none';
-}
-atrate.onmouseleave = function () {
-    dise1.style.display = 'none';
-    dise2.style.display = 'none';
-    backg.style.backgroundColor = 'transparent';
-    atrate.style.color = 'white';
 }
