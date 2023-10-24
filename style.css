@@ -370,7 +370,7 @@ span {
 }
 
 .contact h1 {
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
     font-size: 6rem;
 }
 
@@ -406,13 +406,17 @@ span {
 
 
 .swatch {
-    display: block;
+    display: flex;
+    justify-content: end;
     text-align: center;
-    position: relative;
-    height:225px;
-    width: 360px;
+    height:352px;
+    width: 215px;
+    transform: rotate(90deg);
+    animation: stop-ani 2s;
 }
-
+.swatch:hover .swatch{
+    animation: stop-ani 2s;
+}
 .swatch div {
     width: 60px;
     height: 195px;
@@ -449,28 +453,28 @@ span {
 
 .div1{
     background-color: var(--main-color);
-    animation: revert-back-1 2s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: revert-back-1 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .div2 {
     background-color: var(--second-bg-color);
-    animation: revert-back-2 2s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: revert-back-2 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .div3 {
     background-color: var(--main-color);
-    animation: revert-back-3 2s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: revert-back-3 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .div4 {
     background-color: var(--second-bg-color);
-    animation: revert-back-4 2s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: revert-back-4 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .div5 {
     background-color: var(--main-color);
-    animation: revert-back-5 2s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: revert-back-5 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .div6 {
     background-color: var(--second-bg-color);
-    animation: revert-back-6 2s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: revert-back-6 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .div6 h2{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -597,10 +601,18 @@ span {
     }
 }
 
+@keyframes stop-ani {
+    0%{
+        z-index: 1;
+    }
+    100%{
+        z-index: 100;
+    }
+}
 
 @keyframes revert-back-6 {
     0% {
-        transform: rotate(65deg);
+        transform: rotate(0deg);
     }
 
     100% {
@@ -609,7 +621,7 @@ span {
 }
 @keyframes revert-back-5 {
     0% {
-        transform: rotate(40deg);
+        transform: rotate(-36deg);
     }
 
     100% {
@@ -618,7 +630,7 @@ span {
 }
 @keyframes revert-back-4 {
     0% {
-        transform: rotate(15deg);
+        transform: rotate(-72deg);
     }
 
     100% {
@@ -627,7 +639,7 @@ span {
 }
 @keyframes revert-back-3 {
     0% {
-        transform: rotate(-15deg);
+        transform: rotate(-108deg);
     }
 
     100% {
@@ -636,7 +648,7 @@ span {
 }
 @keyframes revert-back-2 {
     0% {
-        transform: rotate(-40deg);
+        transform: rotate(-144deg);
     }
 
     100% {
@@ -645,7 +657,7 @@ span {
 }
 @keyframes revert-back-1 {
     0% {
-        transform: rotate(-65deg);
+        transform: rotate(-180deg);
     }
 
     100% {
@@ -658,11 +670,11 @@ span {
     }
 
     2% {
-        transform: rotate(-65deg);
+        transform: rotate(-180deg);
     }
 
     100% {
-        transform: rotate(-65deg);
+        transform: rotate(-180deg);
     }
 }
 
@@ -672,11 +684,11 @@ span {
     }
 
     2% {
-        transform: rotate(-40deg);
+        transform: rotate(-144deg);
     }
 
     100% {
-        transform: rotate(-40deg);
+        transform: rotate(-144deg);
     }
 }
 
@@ -686,11 +698,11 @@ span {
     }
 
     2% {
-        transform: rotate(-15deg);
+        transform: rotate(-108deg);
     }
 
     100% {
-        transform: rotate(-15deg);
+        transform: rotate(-108deg);
     }
 }
 
@@ -700,11 +712,11 @@ span {
     }
 
     2% {
-        transform: rotate(15deg);
+        transform: rotate(-72deg);
     }
 
     100% {
-        transform: rotate(15deg);
+        transform: rotate(-72deg);
     }
 }
 
@@ -714,11 +726,11 @@ span {
     }
 
     2% {
-        transform: rotate(40deg);
+        transform: rotate(-36deg);
     }
 
     100% {
-        transform: rotate(40deg);
+        transform: rotate(-36deg);
     }
 }
 
@@ -728,11 +740,11 @@ span {
     }
 
     2% {
-        transform: rotate(65deg);
+        transform: rotate(0deg);
     }
 
     100% {
-        transform: rotate(65deg);
+        transform: rotate(0deg);
     }
 }
 
@@ -794,9 +806,6 @@ span {
     .projects-layer img {
         width: 150px;
         height: auto;
-    }
-    .swatch {
-        width: 360px;
     }
 }
 
@@ -885,10 +894,6 @@ span {
     .projects-layer h2 {
         display: none;
     }
-
-    .swatch {
-        width: 350px;
-    }
 }
 
 @media (max-width: 617px) {
@@ -923,9 +928,6 @@ span {
         width: 70px;
         height: auto;
     }
-    .swatch {
-        width: 350px;
-    }
 }
 
 @media (max-width: 375px) {
@@ -958,8 +960,30 @@ span {
         height: 100px;
         transition: 1s ease;
     }
-    .swatch {
-        width: 350px;
+    .swatch{
+        height: 217px;
+        width: 130px;
     }
-
+    .swatch div{
+        width: 40px;
+        height: 120px;
+    }
+    .swatch div:before{
+        width: 10px;
+        height: 10px;
+        margin-left: -5px;
+    }
+    .swatch h2 {
+        font-size: medium;
+        margin-top: 30px;
+    }
+    .dpie{
+        max-width: 275px;
+    }
+    .dbar{
+        max-width: 275px;
+    }
+    .contact h1{
+        font-size: xx-large;
+    }
 }
