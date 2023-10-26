@@ -27,13 +27,11 @@ html {
 }
 
 body {
-    /* background-color: var(--bg-color); */
     background-color: black;
     color: var(--text-color);
 }
 
 section {
-    /* min-height: 100vh; */
     padding: 10rem 9% 2rem;
 }
 
@@ -89,6 +87,55 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+
+.light {
+    background: url('./content/backgroundW.svg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.light{
+    --bg-color: #ffffff;
+    --second-bg-color: #ffffff;
+    --text-color: #000000;
+    --main-color: #0ef;
+}
+
+
+.toggle {
+    margin-top: 1rem;
+    display: inline-block;
+    width: 40px;
+    position: relative;
+    height: 24px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 30px;
+    border: 2px solid gray;
+}
+
+.toggle:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: gray;
+    left: -1px;
+    transition: all 0.5s;
+}
+
+.checkbox:checked+.toggle::after {
+    left: 18px;
+}
+
+.checkbox:checked+.toggle {
+    background-color: rgb(255, 255, 255);
+}
+
+.checkbox {
+    display: none;
+}
+
 
 .home {
     display: flex;
@@ -409,14 +456,16 @@ span {
     display: flex;
     justify-content: end;
     text-align: center;
-    height:352px;
+    height: 352px;
     width: 215px;
     transform: rotate(90deg);
     animation: stop-ani 2s;
 }
-.swatch:hover .swatch{
+
+.swatch:hover .swatch {
     animation: stop-ani 2s;
 }
+
 .swatch div {
     width: 60px;
     height: 195px;
@@ -434,10 +483,12 @@ span {
     margin-left: -25px;
     transform: rotate(0deg);
 }
-.swatch i{
+
+.swatch i {
     font-size: 30px;
     cursor: pointer;
 }
+
 .swatch div:before {
     width: 16px;
     height: 16px;
@@ -451,10 +502,11 @@ span {
     font-size: large;
 }
 
-.div1{
+.div1 {
     background-color: var(--main-color);
     animation: revert-back-1 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .div2 {
     background-color: var(--second-bg-color);
     animation: revert-back-2 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -464,24 +516,29 @@ span {
     background-color: var(--main-color);
     animation: revert-back-3 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .div4 {
     background-color: var(--second-bg-color);
     animation: revert-back-4 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .div5 {
     background-color: var(--main-color);
     animation: revert-back-5 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .div6 {
     background-color: var(--second-bg-color);
     animation: revert-back-6 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.div6 h2{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+.div6 h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     transform: rotate(-90deg);
     margin-top: 100px;
     font-size: 4rem;
 }
+
 .swatch:hover .div1 {
     animation: swatch-purple-motion 50s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -507,7 +564,7 @@ span {
 }
 
 
-.swatch:hover .div6{
+.swatch:hover .div6 {
     animation: swatch-red-motion 50s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -602,10 +659,11 @@ span {
 }
 
 @keyframes stop-ani {
-    0%{
+    0% {
         z-index: 1;
     }
-    100%{
+
+    100% {
         z-index: 100;
     }
 }
@@ -619,6 +677,7 @@ span {
         transform: rotate(0deg);
     }
 }
+
 @keyframes revert-back-5 {
     0% {
         transform: rotate(-36deg);
@@ -628,6 +687,7 @@ span {
         transform: rotate(0deg);
     }
 }
+
 @keyframes revert-back-4 {
     0% {
         transform: rotate(-72deg);
@@ -637,6 +697,7 @@ span {
         transform: rotate(0deg);
     }
 }
+
 @keyframes revert-back-3 {
     0% {
         transform: rotate(-108deg);
@@ -646,6 +707,7 @@ span {
         transform: rotate(0deg);
     }
 }
+
 @keyframes revert-back-2 {
     0% {
         transform: rotate(-144deg);
@@ -655,6 +717,7 @@ span {
         transform: rotate(0deg);
     }
 }
+
 @keyframes revert-back-1 {
     0% {
         transform: rotate(-180deg);
@@ -664,6 +727,7 @@ span {
         transform: rotate(0deg);
     }
 }
+
 @keyframes swatch-purple-motion {
     0% {
         transform: rotate(0deg);
@@ -960,30 +1024,37 @@ span {
         height: 100px;
         transition: 1s ease;
     }
-    .swatch{
+
+    .swatch {
         height: 217px;
         width: 130px;
     }
-    .swatch div{
+
+    .swatch div {
         width: 40px;
         height: 120px;
     }
-    .swatch div:before{
+
+    .swatch div:before {
         width: 10px;
         height: 10px;
         margin-left: -5px;
     }
+
     .swatch h2 {
         font-size: medium;
         margin-top: 30px;
     }
-    .dpie{
+
+    .dpie {
         max-width: 275px;
     }
-    .dbar{
+
+    .dbar {
         max-width: 275px;
     }
-    .contact h1{
+
+    .contact h1 {
         font-size: xx-large;
     }
 }

@@ -133,3 +133,12 @@ atrate.onclick = function () {
 function visiblenot() {
     document.getElementById('msgcon').style.display = 'none';
 }
+
+
+// <==============on click contact==============>
+
+let btn = document.getElementById('switch');
+let body = document.querySelector('body');
+btn.addEventListener('click', () => {
+    body.classList.toggle('light');
+});
