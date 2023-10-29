@@ -403,8 +403,9 @@ span {
 }
 
 .projects-layer img {
-    width: 200px;
     height: auto;
+    max-width: 200px;
+    max-height: 100px;
 }
 
 .projects-layer h4 {
