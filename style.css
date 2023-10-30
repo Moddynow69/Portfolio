@@ -35,6 +35,10 @@ section {
     padding: 10rem 9% 2rem;
 }
 
+.hoverable{
+    cursor: pointer;
+}
+
 .header {
     position: fixed;
     top: 0;
