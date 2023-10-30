@@ -27,7 +27,7 @@ html {
 }
 
 body {
-    background-color: black;
+    background-color: var(--bg-color);
     color: var(--text-color);
 }
 
@@ -513,7 +513,7 @@ span {
     width: 16px;
     height: 16px;
     content: "";
-    background-color: #FFFFFF;
+    background-color: var(--text-color);
     display: inline-block;
     border-radius: 8px;
     bottom: 10px;
