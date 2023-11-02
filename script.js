@@ -142,3 +142,33 @@ let body = document.querySelector('body');
 btn.addEventListener('click', () => {
     body.classList.toggle('light');
 });
+let btnG = document.getElementById('Cswitch1');
+let btnR = document.getElementById('Cswitch2');
+let btnB = document.getElementById('Cswitch3');
+btnG.addEventListener('click', () => {
+    body.classList.toggle('greenMode');
+    if(body.classList.contains('redMode')) {
+        body.classList.toggle('redMode');
+    }
+    if(body.classList.contains('blueMode')) {
+        body.classList.toggle('blueMode');
+    }
+});
+btnR.addEventListener('click', () => {
+    body.classList.toggle('redMode');
+    if(body.classList.contains('greenMode')) {
+        body.classList.toggle('greenMode');
+    }
+    if(body.classList.contains('blueMode')) {
+        body.classList.toggle('blueMode');
+    }
+});
+btnB.addEventListener('click', () => {
+    body.classList.toggle('blueMode');
+    if(body.classList.contains('greenMode')) {
+        body.classList.toggle('greenMode');
+    }
+    if(body.classList.contains('redMode')) {
+        body.classList.toggle('redMode');
+    }
+});

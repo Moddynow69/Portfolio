@@ -19,6 +19,9 @@ a {
     --second-bg-color: #323946;
     --text-color: #fff;
     --main-color: #0ef;
+    --main-green: #32cd32;
+    --main-red: #ff2400;
+    --main-blue: #0077ff;
 }
 
 html {
@@ -98,13 +101,23 @@ body {
     background-attachment: fixed;
 }
 
-.light{
+.light {
     --bg-color: #ffffff;
     --second-bg-color: #ffffff;
     --text-color: #000000;
     --main-color: #0ef;
 }
 
+.greenMode {
+    --main-color: #32cd32;
+}
+
+.redMode {
+    --main-color: #ff2400;
+}
+.blueMode {
+    --main-color: #0077ff;
+}
 
 .toggle {
     margin-top: 1rem;
@@ -137,17 +150,63 @@ body {
 }
 
 .con:after{
-    content: "Dark";
+    content: "Light";
     font-size: 2rem;
 }
 
 .checkbox:checked + .toggle + .con:after{
-    content: "Light";
+    content: "Dark";
 }
 
 .checkbox {
     display: none;
 }
+
+
+/* color change css */
+
+.colorGrade{
+    margin-left: 4px;
+    padding-top: 5px;
+    padding-right: 2px;
+    padding-left: 2px;
+    border: 2px solid #000000;
+    width: max-content;
+}
+
+.checkbox1 , .checkbox2 , .checkbox3 {
+    display: none;
+}
+.Cswitch1 , .Cswitch2 , .Cswitch3 {
+    padding: 2px;
+    display: inline-block;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 30px;
+    border: 1px solid gray;
+}
+
+.Cswitch1:after , .Cswitch2:after , .Cswitch3:after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.blue{
+    background-color: var(--main-blue);
+}
+.green{
+    background-color: var(--main-green);
+}
+.red {
+    background-color: var(--main-red);
+}
+
+
 
 .navbar:nth-child(6) {
     display: flex;
