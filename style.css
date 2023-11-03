@@ -38,7 +38,7 @@ section {
     padding: 10rem 9% 2rem;
 }
 
-.hoverable{
+.hoverable {
     cursor: pointer;
 }
 
@@ -115,6 +115,7 @@ body {
 .redMode {
     --main-color: #ff2400;
 }
+
 .blueMode {
     --main-color: #0077ff;
 }
@@ -149,12 +150,12 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
-.con:after{
+.con:after {
     content: "Light";
     font-size: 2rem;
 }
 
-.checkbox:checked + .toggle + .con:after{
+.checkbox:checked+.toggle+.con:after {
     content: "Dark";
 }
 
@@ -165,7 +166,7 @@ body {
 
 /* color change css */
 
-.colorGrade{
+.colorGrade {
     margin-left: 4px;
     padding-top: 5px;
     padding-right: 2px;
@@ -174,10 +175,15 @@ body {
     width: max-content;
 }
 
-.checkbox1 , .checkbox2 , .checkbox3 {
+.checkbox1,
+.checkbox2,
+.checkbox3 {
     display: none;
 }
-.Cswitch1 , .Cswitch2 , .Cswitch3 {
+
+.Cswitch1,
+.Cswitch2,
+.Cswitch3 {
     padding: 2px;
     display: inline-block;
     position: relative;
@@ -188,7 +194,9 @@ body {
     border: 1px solid gray;
 }
 
-.Cswitch1:after , .Cswitch2:after , .Cswitch3:after {
+.Cswitch1:after,
+.Cswitch2:after,
+.Cswitch3:after {
     content: '';
     position: absolute;
     width: 12px;
@@ -196,12 +204,15 @@ body {
     border-radius: 50%;
     transition: all 0.5s;
 }
-.blue{
+
+.blue {
     background-color: var(--main-blue);
 }
-.green{
+
+.green {
     background-color: var(--main-green);
 }
+
 .red {
     background-color: var(--main-red);
 }
@@ -695,21 +706,28 @@ span {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(1, 208, 223);
+    background: var(--main-color);
     box-shadow: 0 0 10px 5px rgb(82, 132, 135);
 }
 
 @keyframes float {
     0% {
-        transform: translateY(0);
+        border-radius: 30% 25% 20% 25%;
     }
-
-    50% {
-        transform: translateY(-2.4rem);
+    20% {
+        border-radius: 25% 30% 20% 25%;
     }
-
+    40% {
+        border-radius: 20% 25% 30% 25%;
+    }
+    60% {
+        border-radius: 20% 25% 25% 30%;
+    }
+    80% {
+        border-radius: 20% 20% 25% 30%;
+    }
     100% {
-        transform: translateY(0);
+        border-radius: 30% 25% 20% 25%;;
     }
 }
 
