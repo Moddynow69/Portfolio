@@ -541,6 +541,20 @@ span {
     color: rgb(1, 42, 45)
 }
 
+.contactCon{
+    display: flex;
+    flex-direction: row;
+}
+
+.mypic{
+    background-image: url('./content/unmasked.png');
+}
+.masked:hover{
+    scale: 1.1;
+}
+.masked:hover + .mypic{
+    filter: grayscale(100%);
+}
 
 .swatch {
     display: flex;
