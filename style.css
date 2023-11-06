@@ -65,6 +65,9 @@ section {
     font-weight: 600;
     cursor: pointer;
     text-decoration: none;
+    /* font-family: 'Brush Script MT', cursive; */
+    /* font-family: 'Brush Script MT'; */
+    font-family: cursive;
 }
 
 .logo:hover {
@@ -541,22 +544,31 @@ span {
     color: rgb(1, 42, 45)
 }
 
-.contactCon{
+.me{
+    width: 80%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    border-radius: 20%;
 }
-
-.mypic{
-    background-image: url('./content/unmasked.png');
+.masked{
+    position: absolute;
+    z-index: 10;
+    border-radius: 20%;
 }
 .masked:hover{
     scale: 1.1;
 }
-.masked:hover + .mypic{
-    filter: grayscale(100%);
+.unmasked{
+   animation: aniBlur 5s infinite ease-in-out;
+}
+.masked:hover+.unmasked{
+    animation-play-state: paused;
+    filter: blur(100px);
 }
 
 .swatch {
+    align-self: end;
     display: flex;
     justify-content: end;
     text-align: center;
@@ -564,6 +576,7 @@ span {
     width: 215px;
     transform: rotate(90deg);
     animation: stop-ani 2s;
+    margin-left: 150px;
 }
 
 .swatch:hover .swatch {
@@ -1025,6 +1038,17 @@ span {
     }
 }
 
+@keyframes aniBlur {
+    0%{
+        filter: blur(15px);
+    }
+    50%{
+        filter: blur(30px);
+    }
+    100%{
+        filter: blur(15px);
+    }
+}
 
 @media (max-width: 1200px) {
     html {
@@ -1046,7 +1070,7 @@ span {
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
     .header {
         padding: 2rem 3%;
     }
@@ -1083,6 +1107,16 @@ span {
     .projects-layer img {
         width: 150px;
         height: auto;
+    }
+    .me{
+        flex-direction: column;
+    }
+    .mypic{
+        align-self: center;
+    }
+    .swatch{
+        margin-left: 0px;
+        align-self: center;
     }
 }
 
@@ -1181,6 +1215,9 @@ span {
     .emailcon {
         width: 350px;
     }
+    .mypic img{
+        width: 400px;
+    }
 }
 
 @media(max-width: 450px) {
@@ -1269,5 +1306,8 @@ span {
 
     .contact h1 {
         font-size: xx-large;
+    }
+    .mypic img{
+        width: 300px;
     }
 }
