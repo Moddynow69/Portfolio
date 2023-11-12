@@ -1192,6 +1192,9 @@ span {
     }
 
     .about {
+        flex-direction: column;
+    }
+    .upperAbout {
         flex-direction: column-reverse;
     }
 
