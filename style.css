@@ -308,7 +308,7 @@ span {
 
 .about {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
