@@ -60,14 +60,13 @@ section {
 }
 
 .logo {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     color: var(--text-color);
-    font-weight: 600;
+    font-weight: 400;
     cursor: pointer;
     text-decoration: none;
-    /* font-family: 'Brush Script MT', cursive; */
-    /* font-family: 'Brush Script MT'; */
-    font-family: cursive;
+    font-family: 'Galactic Vanguardian ncv',sans-serif;
+    animation : litup 3s ease-in-out;
 }
 
 .logo:hover {
@@ -305,7 +304,40 @@ span {
 .btn:hover {
     box-shadow: none;
 }
-
+.home-img-2{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.home-img-2 img{
+    width: 900px;
+    filter: drop-shadow(0px 0px 10px var(--main-color));
+}
+.home-img-2 img:hover{
+    scale: 1.01;
+    filter: drop-shadow(0px 0px 20px var(--main-color));
+}
+.bg-text{
+    position: absolute;
+    top: 15%;
+    font-size: 70rem;
+    font-weight: 700;
+    font-family: Orbitron;
+    pointer-events: none;
+    z-index: -1;
+    animation: infislide 9s ease-in-out infinite;
+}
+.bg-textF{
+    position: absolute;
+    top: 15%;
+    font-size: 70rem;
+    font-weight: 700;
+    font-family: Orbitron;
+    color: rgba(255, 255, 255, 0.394);
+    pointer-events: none;
+    animation: infislide 9s ease-in-out infinite;
+}
 .about {
     display: flex;
     flex-direction: column;
@@ -595,22 +627,6 @@ fieldset {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border-radius: 20%;
-}
-.masked{
-    position: absolute;
-    z-index: 10;
-    border-radius: 20%;
-}
-.masked:hover{
-    scale: 1.1;
-}
-.unmasked{
-   animation: aniBlur 5s infinite ease-in-out;
-}
-.masked:hover+.unmasked{
-    animation-play-state: paused;
-    filter: blur(100px);
 }
 
 .swatch {
@@ -622,7 +638,6 @@ fieldset {
     width: 215px;
     transform: rotate(90deg);
     animation: stop-ani 2s;
-    margin-left: 150px;
 }
 
 .swatch:hover .swatch {
@@ -840,6 +855,27 @@ fieldset {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--main-color);
     box-shadow: 0 0 10px 5px rgb(82, 132, 135);
+}
+
+@keyframes litup {
+    0% {
+        color: transparent;
+    }
+    100%{
+        color: var(--text-color);
+    }
+}
+@keyframes infislide {
+    0% {
+        transform: translateX(700px);
+    }
+    50% {
+        transform: translateX(-3000px);
+    }
+    100% {
+        transform: translateX(700px);
+    }
+    
 }
 
 @keyframes float {
@@ -1117,6 +1153,9 @@ fieldset {
 }
 
 @media (max-width: 1024px) {
+    .home-img-2{
+        display: none;
+    }
     .header {
         padding: 2rem 3%;
     }
