@@ -327,6 +327,7 @@ span {
     pointer-events: none;
     z-index: -1;
     animation: infislide 9s ease-in-out infinite;
+    filter: drop-shadow(5px 5px 5px var(--main-color));
 }
 .bg-textF{
     position: absolute;
@@ -334,7 +335,7 @@ span {
     font-size: 70rem;
     font-weight: 700;
     font-family: Orbitron;
-    color: rgba(255, 255, 255, 0.394);
+    color: rgba(255, 255, 255, 0.161);
     pointer-events: none;
     animation: infislide 9s ease-in-out infinite;
 }
@@ -744,66 +745,6 @@ fieldset {
 
 .swatch:hover .div6 {
     animation: swatch-red-motion 50s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-
-
-
-
-
-
-.container {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    height: 200px;
-    width: 70%;
-}
-
-.pacman {
-    position: relative;
-    background: transparent;
-    z-index: 1;
-}
-
-.pacman::before,
-.pacman::after {
-    position: absolute;
-    top: -35px;
-    display: block;
-    border-radius: 50%;
-    content: "";
-    height: 0px;
-    width: 0px;
-}
-
-.pacman::before {
-    animation: chunk-top 0.5s ease infinite;
-    border: 35px solid var(--main-color);
-    border-left-color: transparent;
-    border-bottom-color: transparent;
-}
-
-.pacman::after {
-    animation: chunk-bottom 0.5s ease infinite;
-    border: 35px solid var(--main-color);
-    border-right-color: transparent;
-    border-top-color: transparent;
-}
-
-.path {
-    display: flex;
-    justify-content: space-around;
-    animation: eating-path 0.5s linear infinite;
-    width: 100%;
-}
-
-.path::before {
-    background: var(--text-color);
-    border-radius: 50%;
-    content: "";
-    height: 1rem;
-    width: 1rem;
 }
 
 
