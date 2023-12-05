@@ -65,8 +65,8 @@ section {
     font-weight: 400;
     cursor: pointer;
     text-decoration: none;
-    font-family: 'Galactic Vanguardian ncv',sans-serif;
-    animation : litup 3s ease-in-out;
+    font-family: 'Galactic Vanguardian ncv', sans-serif;
+    animation: litup 3s ease-in-out;
 }
 
 .logo:hover {
@@ -304,41 +304,38 @@ span {
 .btn:hover {
     box-shadow: none;
 }
-.home-img-2{
+
+.home-img-2 {
     width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.home-img-2 img{
-    width: 900px;
-    filter: drop-shadow(0px 0px 10px var(--main-color));
+
+.home-img-2 img {
+    width: 700px;
+    filter: drop-shadow(0px 0px 1px var(--main-color));
 }
-.home-img-2 img:hover{
-    scale: 1.01;
-    filter: drop-shadow(0px 0px 20px var(--main-color));
-}
-.bg-text{
+
+.bg-text {
     position: absolute;
-    top: 15%;
-    font-size: 70rem;
-    font-weight: 700;
-    font-family: Orbitron;
+    font-size: 50rem;
+    font-family: Orbitron, sans-serif;
     pointer-events: none;
     z-index: -1;
     animation: infislide 9s ease-in-out infinite;
     filter: drop-shadow(5px 5px 5px var(--main-color));
 }
-.bg-textF{
+
+.bg-textF {
     position: absolute;
-    top: 15%;
-    font-size: 70rem;
-    font-weight: 700;
+    font-size: 50rem;
     font-family: Orbitron;
     color: rgba(255, 255, 255, 0.161);
     pointer-events: none;
     animation: infislide 9s ease-in-out infinite;
 }
+
 .about {
     display: flex;
     flex-direction: column;
@@ -346,37 +343,48 @@ span {
     align-items: center;
     gap: 2rem;
 }
-.upperAbout{
+
+.upperAbout {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
 }
-.lowerAbout{
+
+.lowerAbout {
     width: 80%;
     margin-top: 10px;
 }
-.lowerAbout h1{
+
+.lowerAbout h1 {
     font-size: 4.5rem;
     margin-bottom: 10px;
-    color: var(--text-color);;
+    color: var(--text-color);
+    ;
 }
-.lowerAbout h2{
+
+.lowerAbout h2 {
     font-size: 3.5rem;
     margin-bottom: 10px;
-    color: var(--text-color);;
+    color: var(--text-color);
+    ;
 }
-.lowerAbout h3{
+
+.lowerAbout h3 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    color: var(--text-color);;
+    color: var(--text-color);
+    ;
 }
-.lowerAbout p{
+
+.lowerAbout p {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: var(--text-color);;
+    color: var(--text-color);
+    ;
 }
+
 .about-img img {
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
@@ -483,7 +491,7 @@ legend {
     background-color: #000;
     color: #fff;
     padding: 3px 6px;
-  }
+}
 
 fieldset {
     border: 1px solid #000;
@@ -588,16 +596,13 @@ fieldset {
     color: var(--second-bg-color);
 }
 
-.contact h1 {
-    /* margin-bottom: 3rem; */
-    font-size: 6rem;
-}
-
 .contact {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 2rem;
+    min-height: 100vh;
 }
 
 .contact h1 {
@@ -617,13 +622,15 @@ fieldset {
 #atrate:hover .dise1 .dise2 {
     visibility: visible;
 }
-
+.headcon{
+    font-size: 5rem;
+}
 
 .contact a i:hover {
     color: rgb(1, 42, 45)
 }
 
-.me{
+.me {
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -639,6 +646,11 @@ fieldset {
     width: 215px;
     transform: rotate(90deg);
     animation: stop-ani 2s;
+    margin-left: -100px;
+}
+
+.swatch:hover {
+    animation: moveleft 1s forwards;
 }
 
 .swatch:hover .swatch {
@@ -649,7 +661,6 @@ fieldset {
     width: 60px;
     height: 195px;
     position: absolute;
-    top: 0px;
     border-radius: 5px;
     border-top: solid 2px rgba(0, 0, 0, 0.2);
     border-left: solid 3px rgba(255, 255, 255, 0.2);
@@ -659,7 +670,6 @@ fieldset {
     transform-origin: center 90%;
     display: inline-block;
     backface-visibility: hidden;
-    margin-left: -25px;
     transform: rotate(0deg);
 }
 
@@ -716,6 +726,40 @@ fieldset {
     transform: rotate(-90deg);
     margin-top: 100px;
     font-size: 4rem;
+    pointer-events: none
+}
+
+.bg-text-con {
+    position: absolute;
+    font-size: 20rem;
+    font-family: Orbitron, sans-serif;
+    pointer-events: none;
+    filter: drop-shadow(5px 5px 5px var(--main-color));
+    z-index: -1;
+}
+
+.bg-text-con::after {
+    content: "";
+}
+
+.div1:hover ~ .bg-text-con::after {
+    content: "Instagram";
+}
+
+.div2:hover ~.bg-text-con::after {
+    content: "Linkedin";
+}
+
+.div3:hover ~.bg-text-con::after {
+    content: "Github";
+}
+
+.div4:hover ~.bg-text-con::after {
+    content: "Mail";
+}
+
+.div5:hover ~.bg-text-con::after {
+    content: "Resume";
 }
 
 .swatch:hover .div1 {
@@ -798,25 +842,35 @@ fieldset {
     box-shadow: 0 0 10px 5px rgb(82, 132, 135);
 }
 
+@keyframes moveleft {
+    100% {
+        margin-left: 0px;
+    }
+}
+
 @keyframes litup {
     0% {
         color: transparent;
     }
-    100%{
+
+    100% {
         color: var(--text-color);
     }
 }
+
 @keyframes infislide {
     0% {
         transform: translateX(700px);
     }
+
     50% {
         transform: translateX(-3000px);
     }
+
     100% {
         transform: translateX(700px);
     }
-    
+
 }
 
 @keyframes float {
@@ -1062,13 +1116,15 @@ fieldset {
 }
 
 @keyframes aniBlur {
-    0%{
+    0% {
         filter: blur(15px);
     }
-    50%{
+
+    50% {
         filter: blur(30px);
     }
-    100%{
+
+    100% {
         filter: blur(15px);
     }
 }
@@ -1094,9 +1150,10 @@ fieldset {
 }
 
 @media (max-width: 1024px) {
-    .home-img-2{
+    .home-img-2 {
         display: none;
     }
+
     .header {
         padding: 2rem 3%;
     }
@@ -1134,13 +1191,16 @@ fieldset {
         width: 150px;
         height: auto;
     }
-    .me{
+
+    .me {
         flex-direction: column;
     }
-    .mypic{
+
+    .mypic {
         align-self: center;
     }
-    .swatch{
+
+    .swatch {
         margin-left: 0px;
         align-self: center;
     }
@@ -1190,6 +1250,7 @@ fieldset {
     .about {
         flex-direction: column;
     }
+
     .upperAbout {
         flex-direction: column-reverse;
     }
@@ -1244,7 +1305,8 @@ fieldset {
     .emailcon {
         width: 350px;
     }
-    .mypic img{
+
+    .mypic img {
         width: 400px;
     }
 }
@@ -1336,7 +1398,8 @@ fieldset {
     .contact h1 {
         font-size: xx-large;
     }
-    .mypic img{
+
+    .mypic img {
         width: 300px;
     }
 }
