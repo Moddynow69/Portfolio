@@ -22,6 +22,7 @@ a {
     --main-green: #32cd32;
     --main-red: #ff2400;
     --main-blue: #0077ff;
+    --main-thrid: rgba(255, 255, 255, 0.161);
 }
 
 html {
@@ -60,7 +61,7 @@ section {
 }
 
 .logo {
-    font-size: 3.5rem;
+    font-size: 1.5rem;
     color: var(--text-color);
     font-weight: 400;
     cursor: pointer;
@@ -108,6 +109,8 @@ body {
     --second-bg-color: #ffffff;
     --text-color: #000000;
     --main-color: #0ef;
+    --main-thrid: rgba(15, 15, 15, 0.161);
+
 }
 
 .greenMode {
@@ -305,35 +308,87 @@ span {
     box-shadow: none;
 }
 
+#home2 {
+    height: 100vh;
+    width: 100vw;
+    align-items: end;
+    padding: 0rem 0% 0rem;
+}
 .home-img-2 {
-    width: 80%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
 }
 
-.home-img-2 img {
-    width: 700px;
+.home-img-2>img {
+    width: 800px;
     filter: drop-shadow(0px 0px 1px var(--main-color));
+    animation: popup 2.3s ease-in-out;
 }
 
 .bg-text {
+    left: 0%;
     position: absolute;
-    font-size: 50rem;
+    font-size: 9rem;
     font-family: Orbitron, sans-serif;
     pointer-events: none;
     z-index: -1;
-    animation: infislide 9s ease-in-out infinite;
-    filter: drop-shadow(5px 5px 5px var(--main-color));
+    animation: slideR1 2s ease-out forwards;
+    filter: drop-shadow(2px 2px 2px var(--main-color));
 }
 
 .bg-textF {
     position: absolute;
-    font-size: 50rem;
+    font-size: 9rem;
+    right: 0%;
     font-family: Orbitron;
-    color: rgba(255, 255, 255, 0.161);
+    animation: slideL1 2s ease-out forwards;
+    color: var(--main-thrid);
     pointer-events: none;
-    animation: infislide 9s ease-in-out infinite;
+}
+
+.bg-text1 {
+    left: 1%;
+    margin-top: 9rem;
+    position: absolute;
+    font-size: 9rem;
+    font-family: Orbitron, sans-serif;
+    pointer-events: none;
+    z-index: -1;
+    animation: slideR2 2.3s ease-out forwards;
+    filter: drop-shadow(2px 2px 2px var(--main-color));
+}
+
+.bg-textF1 {
+    position: absolute; 
+    font-size: 9rem;
+    margin-top: 9rem;
+    right: 1%;
+    font-family: Orbitron;
+    color: var(--main-thrid);
+    pointer-events: none;
+    animation: slideL2 2.3s ease-out forwards;
+}
+
+.bg-text2 {
+    left: 2%;
+    margin-top: 18rem;
+    position: absolute;
+    font-size: 9rem;
+    font-family: Orbitron, sans-serif;
+    pointer-events: none;
+    z-index: -1;
+    animation: slideR3 2.6s ease-out forwards;
+    filter: drop-shadow(2px 2px 2px var(--main-color));
+}
+
+.bg-textF2 {
+    position: absolute;
+    font-size: 9rem;
+    margin-top: 18rem;
+    right: 2%;
+    font-family: Orbitron;
+    color: var(--main-thrid);
+    pointer-events: none;
+    animation: slideL3 2.6s ease-out forwards;
 }
 
 .about {
@@ -622,7 +677,8 @@ fieldset {
 #atrate:hover .dise1 .dise2 {
     visibility: visible;
 }
-.headcon{
+
+.headcon {
     font-size: 5rem;
 }
 
@@ -742,23 +798,23 @@ fieldset {
     content: "";
 }
 
-.div1:hover ~ .bg-text-con::after {
+.div1:hover~.bg-text-con::after {
     content: "Instagram";
 }
 
-.div2:hover ~.bg-text-con::after {
+.div2:hover~.bg-text-con::after {
     content: "Linkedin";
 }
 
-.div3:hover ~.bg-text-con::after {
+.div3:hover~.bg-text-con::after {
     content: "Github";
 }
 
-.div4:hover ~.bg-text-con::after {
+.div4:hover~.bg-text-con::after {
     content: "Mail";
 }
 
-.div5:hover ~.bg-text-con::after {
+.div5:hover~.bg-text-con::after {
     content: "Resume";
 }
 
@@ -857,20 +913,88 @@ fieldset {
         color: var(--text-color);
     }
 }
+@keyframes popup {
+    0% {
+        margin-top: 100px;
+    }
+
+    100% {
+        margin-top: 0px;
+    }
+}
+@keyframes popup2 {
+    0% {
+        opacity: 0.9;
+    }
+    100%{
+        opacity: 1;
+        width: 775px;
+    }
+}
 
 @keyframes infislide {
     0% {
-        transform: translateX(700px);
+        transform: translateX(100px);
+        /* align-self:flex-start; */
     }
 
     50% {
-        transform: translateX(-3000px);
+        transform: translateX(-1150px);
     }
 
     100% {
         transform: translateX(700px);
+        /* align-self: flex-end; */
     }
 
+}
+@keyframes slideR1 {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left:0%;
+    }
+}
+@keyframes slideR2 {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left:1%;
+    }
+}
+@keyframes slideR3 {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left:2%;
+    }
+}
+@keyframes slideL1 {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right:0%;
+    }
+}
+@keyframes slideL2 {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right:1%;
+    }
+}
+@keyframes slideL3 {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right:2%;
+    }
 }
 
 @keyframes float {
