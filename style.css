@@ -24,6 +24,14 @@ a {
     --main-blue: #0077ff;
     --main-thrid: rgba(255, 255, 255, 0.161);
 }
+@font-face {
+    font-family: 'Galactic Vanguardian ncv';
+    src: url(./content/Starlord.otf);
+}
+@font-face {
+    font-family: 'orbitron';
+    src: url(./content/orbitron-VariableFont_wght.ttf);
+}
 
 html {
     font-size: 62.5%;
@@ -61,7 +69,7 @@ section {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 400;
     cursor: pointer;
@@ -336,7 +344,7 @@ span {
     left: 0%;
     position: absolute;
     font-size: 9rem;
-    font-family: Orbitron, sans-serif;
+    font-family: orbitron, sans-serif;
     pointer-events: none;
     z-index: -1;
     animation: slideR1 2s ease-out forwards;
@@ -347,7 +355,7 @@ span {
     position: absolute;
     font-size: 9rem;
     right: 0%;
-    font-family: Orbitron;
+    font-family: orbitron;
     animation: slideL1 2s ease-out forwards;
     color: var(--main-thrid);
     pointer-events: none;
@@ -358,7 +366,7 @@ span {
     margin-top: 9rem;
     position: absolute;
     font-size: 9rem;
-    font-family: Orbitron, sans-serif;
+    font-family: orbitron, sans-serif;
     pointer-events: none;
     z-index: -1;
     animation: slideR2 2.3s ease-out forwards;
@@ -370,7 +378,7 @@ span {
     font-size: 9rem;
     margin-top: 9rem;
     right: 1%;
-    font-family: Orbitron;
+    font-family: orbitron;
     color: var(--main-thrid);
     pointer-events: none;
     animation: slideL2 2.3s ease-out forwards;
@@ -381,7 +389,7 @@ span {
     margin-top: 18rem;
     position: absolute;
     font-size: 9rem;
-    font-family: Orbitron, sans-serif;
+    font-family: orbitron, sans-serif;
     pointer-events: none;
     z-index: -1;
     animation: slideR3 2.6s ease-out forwards;
@@ -393,7 +401,7 @@ span {
     font-size: 9rem;
     margin-top: 18rem;
     right: 2%;
-    font-family: Orbitron;
+    font-family: orbitron;
     color: var(--main-thrid);
     pointer-events: none;
     animation: slideL3 2.6s ease-out forwards;
@@ -402,7 +410,7 @@ span {
 .text2 {
     position: absolute;
     font-size: 5rem;
-    font-family: Orbitron, sans-serif;
+    font-family: orbitron, sans-serif;
     pointer-events: none;
     filter: drop-shadow(1px 1px 1px var(--main-color));
     bottom: 1%;
@@ -414,7 +422,7 @@ span {
 
 .text2 span {
     font-size: 5rem;
-    font-family: Orbitron, sans-serif;
+    font-family: orbitron, sans-serif;
     color: var(--text-color);
 }
 
@@ -809,7 +817,7 @@ fieldset {
 .bg-text-con {
     position: absolute;
     font-size: 20rem;
-    font-family: Orbitron, sans-serif;
+    font-family: orbitron, sans-serif;
     filter: drop-shadow(5px 5px 5px var(--main-color));
     z-index: -1;
 }
