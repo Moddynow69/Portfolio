@@ -842,6 +842,10 @@ fieldset {
     content: "Resume";
     animation: litup 0.3s ease-in-out forwards;
 }
+.me>.swatch:has(.div6:hover)+.bg-text-con:after {
+    content: "Links";
+    animation: litup 0.3s ease-in-out forwards;
+}
 
 .swatch:hover .div1 {
     animation: swatch-purple-motion 50s cubic-bezier(0.4, 0, 0.2, 1);
