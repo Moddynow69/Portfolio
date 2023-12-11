@@ -336,10 +336,6 @@ span {
     animation: popup 2.3s ease-in-out;
 }
 
-.home-img-2 :hover {
-    scale: 1.009;
-}
-
 .bg-text {
     left: 0%;
     position: absolute;
