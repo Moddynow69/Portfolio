@@ -957,8 +957,15 @@ fieldset {
     justify-content: center;
     gap: 2rem;
     min-height: 100vh;
+    width: 100%;
 }
-
+.contentC{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
 .contact h1 {
     display: flex;
     align-items: center;
@@ -967,6 +974,20 @@ fieldset {
 .contacticon a {
     font-size: 5rem;
     margin: 10px;
+}
+.businessCard img{
+    width: 600px;
+    transform: rotateY(55deg) rotateX(-45deg);
+    perspective: 500px;
+    transition: 0.7s;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.businessCard img:hover{
+    width: 600px;
+    transform: rotateY(0deg) rotateX(0deg);
+    perspective: 500px;
+    opacity: 1;
 }
 
 #atrate {
@@ -1006,6 +1027,10 @@ fieldset {
 
 .swatch:hover {
     animation: moveleft 1s forwards;
+}
+.me:has(.swatch:hover)~.businessCard {
+    transition: 0.5s;
+    opacity: 0.1;
 }
 
 .swatch:hover .swatch {
@@ -1660,6 +1685,10 @@ fieldset {
         margin-left: 0px;
         align-self: center;
     }
+    
+    .contentC{
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1751,6 +1780,13 @@ fieldset {
     .projects-layer h2 {
         display: none;
     }
+    .businessCard img{
+        width: 300px;
+        margin-right: 0px;
+    }
+    .businessCard img:hover{
+        width: 300px;
+    }
 }
 
 @media (max-width: 617px) {
@@ -1764,6 +1800,11 @@ fieldset {
 
     .mypic img {
         width: 400px;
+    }
+    .bg-text-con:after {
+        margin-top: 200px;
+        font-size: 5rem;
+        text-align: center;
     }
 }
 
@@ -1859,5 +1900,12 @@ fieldset {
 
     .mypic img {
         width: 300px;
+    }
+
+    .businessCard img{
+        width: 250px;
+    }
+    .businessCard img:hover{
+        width: 250px;
     }
 }
