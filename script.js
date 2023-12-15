@@ -1,3 +1,10 @@
+// <--------------Preloader--------------->
+let preloader = document.getElementById('preloader');
+window.addEventListener('load', () => {
+    preloader.classList.toggle('overlay');
+});
+
+
 var xValues = ["C/C++", "HTML/CSS", "JS", "Photoshop/Illustrator", "Video Editing"];
 var yValues = [2, 12, 6, 8, 15, 0, 0];
 var barColors = [
@@ -59,7 +66,7 @@ let mybutton = document.getElementById("myBtn");
 
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
- menuIcon.onclick = () => {
+menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
@@ -71,7 +78,7 @@ window.onscroll = () => {
         let offset = sec.offsetTop - 150;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
-        if(top >= offset && top < offset + height){
+        if (top >= offset && top < offset + height) {
             navlink.forEach(links => {
                 links.classList.remove('active')
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
@@ -88,9 +95,9 @@ ScrollReveal({
     duration: 2600,
     delay: 200
 });
-ScrollReveal().reveal('.home-content, .heading , .lowerAbout', { origin: 'top'});
-ScrollReveal().reveal('.home-img, .skills-container, .projects-box, .contact form , #myimg , .headcon', { origin: 'bottom'});
-ScrollReveal().reveal('.home-content h1, .about-img ,.skills-box , .home-content p, .about-content ,.me', { origin: 'left'});
+ScrollReveal().reveal('.home-content, .heading , .lowerAbout', { origin: 'top' });
+ScrollReveal().reveal('.home-img, .skills-container, .projects-box, .contact form , #myimg , .headcon', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content h1, .about-img ,.skills-box , .home-content p, .about-content ,.me', { origin: 'left' });
 const typed = new Typed('.multiple-text', {
     strings: ['MERN Developer', 'React Native Developer', 'Designer'],
     typeSpeed: 100,
@@ -104,17 +111,17 @@ let big = document.getElementById('big')
 let btnsb = document.getElementById('btnsb');
 let btnbs = document.getElementById('btnbs');
 
-btnsb.onclick = () =>{
-    small.style.display='none';
-    big.style.display='block';
-    btnbs.style.display='inline-block';
-    btnsb.style.display='none';
+btnsb.onclick = () => {
+    small.style.display = 'none';
+    big.style.display = 'block';
+    btnbs.style.display = 'inline-block';
+    btnsb.style.display = 'none';
 }
-btnbs.onclick = () =>{
-    small.style.display='block';
-    big.style.display='none';
-    btnbs.style.display='none';
-    btnsb.style.display='inline-block';
+btnbs.onclick = () => {
+    small.style.display = 'block';
+    big.style.display = 'none';
+    btnbs.style.display = 'none';
+    btnsb.style.display = 'inline-block';
 }
 
 
@@ -146,28 +153,28 @@ let btnR = document.getElementById('Cswitch2');
 let btnB = document.getElementById('Cswitch3');
 btnG.addEventListener('click', () => {
     body.classList.toggle('greenMode');
-    if(body.classList.contains('redMode')) {
+    if (body.classList.contains('redMode')) {
         body.classList.toggle('redMode');
     }
-    if(body.classList.contains('blueMode')) {
+    if (body.classList.contains('blueMode')) {
         body.classList.toggle('blueMode');
     }
 });
 btnR.addEventListener('click', () => {
     body.classList.toggle('redMode');
-    if(body.classList.contains('greenMode')) {
+    if (body.classList.contains('greenMode')) {
         body.classList.toggle('greenMode');
     }
-    if(body.classList.contains('blueMode')) {
+    if (body.classList.contains('blueMode')) {
         body.classList.toggle('blueMode');
     }
 });
 btnB.addEventListener('click', () => {
     body.classList.toggle('blueMode');
-    if(body.classList.contains('greenMode')) {
+    if (body.classList.contains('greenMode')) {
         body.classList.toggle('greenMode');
     }
-    if(body.classList.contains('redMode')) {
+    if (body.classList.contains('redMode')) {
         body.classList.toggle('redMode');
     }
 });
@@ -181,24 +188,24 @@ let mouseOverContainer = document.getElementById("hi2");
 let ex1Layer = document.getElementById("myimg");
 
 function transforms(x, y, el) {
-  let box = el.getBoundingClientRect();
-  let calcX = -(y - box.y - (box.height / 2)) / constrain;
-  let calcY = (x - box.x - (box.width / 2)) / constrain;
-  
-  return "perspective(1200px) "
-    + "   rotateX("+ calcX +"deg) "
-    + "   rotateY("+ calcY +"deg) ";
+    let box = el.getBoundingClientRect();
+    let calcX = -(y - box.y - (box.height / 2)) / constrain;
+    let calcY = (x - box.x - (box.width / 2)) / constrain;
+
+    return "perspective(1200px) "
+        + "   rotateX(" + calcX + "deg) "
+        + "   rotateY(" + calcY + "deg) ";
 };
 
- function transformElement(el, xyEl) {
-  el.style.transform  = transforms.apply(null, xyEl);
+function transformElement(el, xyEl) {
+    el.style.transform = transforms.apply(null, xyEl);
 }
 
-mouseOverContainer.onmousemove = function(e) {
-  let xy = [e.clientX, e.clientY];
-  let position = xy.concat([ex1Layer]);
+mouseOverContainer.onmousemove = function (e) {
+    let xy = [e.clientX, e.clientY];
+    let position = xy.concat([ex1Layer]);
 
-  window.requestAnimationFrame(function(){
-    transformElement(ex1Layer, position);
-  });
+    window.requestAnimationFrame(function () {
+        transformElement(ex1Layer, position);
+    });
 };
