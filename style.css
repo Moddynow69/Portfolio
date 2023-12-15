@@ -446,7 +446,12 @@ body {
     display: none;
 }
 
-
+.swdrmode{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
 /* color change css */
 
 .colorGrade {
@@ -1766,7 +1771,9 @@ fieldset {
     html {
         font-size: 50%;
     }
-
+    .swdrmode{
+        flex-direction: column;
+    }
     .home {
         flex-direction: column;
     }
