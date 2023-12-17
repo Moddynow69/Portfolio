@@ -24,7 +24,8 @@ a {
     --main-blue: #0077ff;
     --main-thrid: rgba(255, 255, 255, 0.161);
 }
-
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.cdnfonts.com/css/galactic-vanguardian-ncv');
 @font-face {
     font-family: 'Galactic Vanguardian ncv';
     src: url(./content/Starlord.otf);
