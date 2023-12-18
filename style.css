@@ -24,8 +24,10 @@ a {
     --main-blue: #0077ff;
     --main-thrid: rgba(255, 255, 255, 0.161);
 }
+
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 @import url('https://fonts.cdnfonts.com/css/galactic-vanguardian-ncv');
+
 @font-face {
     font-family: 'Galactic Vanguardian ncv';
     src: url(./content/Starlord.otf);
@@ -49,6 +51,25 @@ body {
 section {
     padding: 10rem 9% 2rem;
 }
+
+#cursor-custom {
+    height: 50px;
+    width: 50px;
+    pointer-events: none;
+    position: fixed;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #fff,
+        0 0 7px #fff, 0 0 8px #fff, 0 0 10px #fff, 0 0 15px #fff;
+    mix-blend-mode: difference;
+    z-index: 100000;
+}
+
+*:hover ~ #cursor-custom {
+    height: var(--objectheight);
+    width: var(--objectwidth);
+}
+
 
 .overlay {
     display: block;
@@ -447,12 +468,13 @@ body {
     display: none;
 }
 
-.swdrmode{
+.swdrmode {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
 }
+
 /* color change css */
 
 .colorGrade {
@@ -960,13 +982,15 @@ fieldset {
     min-height: 100vh;
     width: 100%;
 }
-.contentC{
+
+.contentC {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 80%;
 }
+
 .contact h1 {
     display: flex;
     align-items: center;
@@ -976,7 +1000,8 @@ fieldset {
     font-size: 5rem;
     margin: 10px;
 }
-.businessCard img{
+
+.businessCard img {
     width: 600px;
     transform: rotateY(55deg) rotateX(-45deg);
     perspective: 500px;
@@ -984,7 +1009,8 @@ fieldset {
     opacity: 0.6;
     cursor: pointer;
 }
-.businessCard img:hover{
+
+.businessCard img:hover {
     width: 600px;
     transform: rotateY(0deg) rotateX(0deg);
     perspective: 500px;
@@ -1029,6 +1055,7 @@ fieldset {
 .swatch:hover {
     animation: moveleft 1s forwards;
 }
+
 .me:has(.swatch:hover)~.businessCard {
     transition: 0.5s;
     opacity: 0.1;
@@ -1686,8 +1713,8 @@ fieldset {
         margin-left: 0px;
         align-self: center;
     }
-    
-    .contentC{
+
+    .contentC {
         flex-direction: column;
     }
 }
@@ -1781,11 +1808,13 @@ fieldset {
     .projects-layer h2 {
         display: none;
     }
-    .businessCard img{
+
+    .businessCard img {
         width: 300px;
         margin-right: 0px;
     }
-    .businessCard img:hover{
+
+    .businessCard img:hover {
         width: 300px;
     }
 }
@@ -1802,6 +1831,7 @@ fieldset {
     .mypic img {
         width: 400px;
     }
+
     .bg-text-con:after {
         margin-top: 200px;
         font-size: 5rem;
@@ -1813,9 +1843,11 @@ fieldset {
     html {
         font-size: 50%;
     }
-    .swdrmode{
+
+    .swdrmode {
         flex-direction: column;
     }
+
     .home {
         flex-direction: column;
     }
@@ -1903,10 +1935,11 @@ fieldset {
         width: 300px;
     }
 
-    .businessCard img{
+    .businessCard img {
         width: 250px;
     }
-    .businessCard img:hover{
+
+    .businessCard img:hover {
         width: 250px;
     }
 }
