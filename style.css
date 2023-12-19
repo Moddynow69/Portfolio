@@ -65,7 +65,7 @@ section {
     z-index: 100000;
 }
 
-*:hover ~ #cursor-custom {
+*:hover~#cursor-custom {
     height: var(--objectheight);
     width: var(--objectwidth);
 }
@@ -985,7 +985,7 @@ fieldset {
 
 .contentC {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     width: 80%;
@@ -1001,20 +1001,34 @@ fieldset {
     margin: 10px;
 }
 
-.businessCard img {
-    width: 600px;
-    transform: rotateY(55deg) rotateX(-45deg);
-    perspective: 500px;
-    transition: 0.7s;
-    opacity: 0.6;
+.hoverme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
     cursor: pointer;
 }
 
-.businessCard img:hover {
-    width: 600px;
-    transform: rotateY(0deg) rotateX(0deg);
-    perspective: 500px;
-    opacity: 1;
+.hoverme h1 {
+    font-family: 'Galactic Vanguardian ncv', sans-serif;
+    font-size: 8rem;
+    color: var(--text-color);
+    margin: 10px;
+}
+
+.hoverme h2 {
+    font-family: 'Galactic Vanguardian ncv', sans-serif;
+    font-size: 4rem;
+    color: var(--text-color);
+    margin: 10px;
+    visibility: hidden;
+    transition-duration: 0.5s;
+}
+
+.hoverme:hover h2 {
+    visibility: visible;
 }
 
 #atrate {
@@ -1055,12 +1069,9 @@ fieldset {
 .swatch:hover {
     animation: moveleft 1s forwards;
 }
-
-.me:has(.swatch:hover)~.businessCard {
-    transition: 0.5s;
+.me:has(.swatch:hover) ~ .hoverme {
     opacity: 0.1;
 }
-
 .swatch:hover .swatch {
     animation: stop-ani 2s;
 }
@@ -1717,6 +1728,9 @@ fieldset {
     .contentC {
         flex-direction: column;
     }
+    .hoverme{
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1807,15 +1821,6 @@ fieldset {
     .projects-layer img,
     .projects-layer h2 {
         display: none;
-    }
-
-    .businessCard img {
-        width: 300px;
-        margin-right: 0px;
-    }
-
-    .businessCard img:hover {
-        width: 300px;
     }
 }
 
@@ -1933,13 +1938,5 @@ fieldset {
 
     .mypic img {
         width: 300px;
-    }
-
-    .businessCard img {
-        width: 250px;
-    }
-
-    .businessCard img:hover {
-        width: 250px;
     }
 }
