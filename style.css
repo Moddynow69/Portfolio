@@ -25,16 +25,13 @@ a {
     --main-thrid: rgba(255, 255, 255, 0.161);
 }
 
-@import url('https://fonts.googleapis.com/css?family=Orbitron');
-@import url('https://fonts.cdnfonts.com/css/galactic-vanguardian-ncv');
-
 @font-face {
-    font-family: 'Galactic Vanguardian ncv';
+    font-family: starlord;
     src: url(./content/Starlord.otf);
 }
 
 @font-face {
-    font-family: 'orbitron';
+    font-family: orbitron;
     src: url(./content/orbitron-VariableFont_wght.ttf);
 }
 
@@ -367,7 +364,7 @@ section {
     font-weight: 400;
     cursor: pointer;
     text-decoration: none;
-    font-family: 'Galactic Vanguardian ncv', sans-serif;
+    font-family: starlord, sans-serif;
     animation: litup 3s ease-in-out;
 }
 
