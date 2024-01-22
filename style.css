@@ -319,7 +319,6 @@ section {
     animation: LABEL 5s linear infinite;
 }
 
-/* Customize */
 .overlay {
     background: var(--bg-color);
 }
@@ -335,8 +334,6 @@ section {
     color: var(--main-color);
 }
 
-/* end here */
-
 .hoverable {
     cursor: pointer;
 }
@@ -346,7 +343,7 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
+    padding: 2rem 3%;
     background: var(--bg-color);
     display: flex;
     justify-content: space-between;
@@ -619,7 +616,6 @@ span {
 }
 
 .home-img-2 {
-    display: flex;
     height: 80%;
     width: 100%;
     display: flex;
@@ -902,9 +898,10 @@ fieldset {
     align-items: center;
 }
 
-.projects-box img {
+.projects-box>img {
     height: 350px;
     transition: 1s ease;
+    filter: drop-shadow(0px 0px 1px var(--text-color));
 }
 
 .projects-box video {
@@ -1240,13 +1237,16 @@ fieldset {
     0% {
         scale: 0.95;
     }
+
     50% {
         scale: 1;
     }
+
     100% {
         scale: 0.95;
     }
 }
+
 @keyframes moveleft {
     100% {
         margin-left: 0px;

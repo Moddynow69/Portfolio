@@ -15,7 +15,6 @@ window.addEventListener('load', () => {
     preloader.classList.toggle('overlay');
 });
 
-
 var xValues = ["C/C++", "HTML/CSS", "JS", "Photoshop/Illustrator", "Video Editing"];
 var yValues = [2, 12, 6, 8, 15, 0, 0];
 var barColors = [
